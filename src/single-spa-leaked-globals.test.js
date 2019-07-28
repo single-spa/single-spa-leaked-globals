@@ -1,12 +1,14 @@
 import singleSpaLeakedGlobals from "./single-spa-leaked-globals";
 
 describe("single-spa-leaked-globals", () => {
+  afterEach(() => {
+    delete window.foo;
+  });
+
   it(`adds the global vars during mount and unmounts them during unmount`, () => {
     const lifecycles = singleSpaLeakedGlobals({
       globalVariableNames: ["foo"]
     });
-
-    console.log("lifecycles", lifecycles);
 
     window.foo = "foo";
 
