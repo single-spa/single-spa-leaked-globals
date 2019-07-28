@@ -29,4 +29,22 @@ describe("single-spa-leaked-globals", () => {
         });
     });
   });
+
+  it(`throws if you don't pass in opts`, () => {
+    expect(() => {
+      singleSpaLeakedGlobals();
+    }).toThrow();
+  });
+
+  it(`throws if globalVariablesNames is not an array`, () => {
+    expect(() => {
+      singleSpaLeakedGlobals({ globalVariableNames: "hi" });
+    }).toThrow();
+  });
+
+  it(`throws if globalVariablesNames is not an array of strings`, () => {
+    expect(() => {
+      singleSpaLeakedGlobals({ globalVariableNames: ["foo", 123] });
+    }).toThrow();
+  });
 });
