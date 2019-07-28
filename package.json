@@ -17,7 +17,8 @@
     }
   },
   "files": [
-    "lib"
+    "lib",
+    "typings"
   ],
   "devDependencies": {
     "@babel/cli": "^7.5.5",
