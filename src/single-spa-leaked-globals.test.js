@@ -23,9 +23,7 @@ describe("single-spa-leaked-globals", () => {
           return lifecycles.mount();
         })
         .then(() => {
-          {
-            expect(window.foo).toBe("foo");
-          }
+          expect(window.foo).toBe("foo");
         });
     });
   });
