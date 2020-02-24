@@ -3,7 +3,11 @@
   "description": "A helper library for single-spa applications that leak global variables",
   "version": "1.0.0",
   "main": "lib/single-spa-leaked-globals.js",
-  "repository": "https://github.com/CanopyTax/single-spa-leaked-globals.git",
+  "repository": "https://github.com/single-spa/single-spa-leaked-globals.git",
+  "bugs": {
+    "url": "https://github.com/single-spa/single-spa-leaked-globals/issues"
+  },
+  "homepage": "https://github.com/single-spa/single-spa-leaked-globals",
   "author": "Joel Denning <joeldenning@gmail.com>",
   "license": "MIT",
   "types": "typings/single-spa-leaked-globals.d.ts",
